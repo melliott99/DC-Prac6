@@ -1,0 +1,29 @@
+﻿ <Window x:Class="ClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        Closing="MainWindow_Closing"
+        xmlns:local="clr-namespace:ClientApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="JobCount" HorizontalAlignment="Left" Height="20" Margin="340,25,0,0" TextWrapping="NoWrap" Text="Job Count: " VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="CodeBox" HorizontalAlignment="Left" Height="300" Margin="35,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" AcceptsTab="True"/>
+        <TextBox Name="CodeTextBox" HorizontalAlignment="Left" Height="20" Margin="35,60,0,0" TextWrapping="NoWrap" Text="Enter Code Below" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="SubmitCode" Content="Submit" HorizontalAlignment="Left" Margin="155,60,0,0" VerticalAlignment="Top" Width="80" Height="20" Click="SubmitCode_Click" Grid.Column="1"/>
+        <Button x:Name="DownloadJob" Content="Download" HorizontalAlignment="Left" Margin="347,350,0,0" VerticalAlignment="Top" Width="100" Height="20" Click="DownloadJob_Click" Grid.Column="1"/>
+        <TextBox x:Name="DownloadDescription" HorizontalAlignment="Left" Height="20" Margin="250,380,0,0" VerticalAlignment="Top" Width="300" Text="Press Download When your ready to push/recieve jobs"></TextBox>
+        <TextBox Name="PortBox" HorizontalAlignment="Left" Height="20" Margin="670,15,0,0" TextWrapping="NoWrap" Text="Port: " VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="AnswerBox" HorizontalAlignment="Left" Height="300" Margin="550,80,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" VerticalScrollBarVisibility="Auto" AcceptsReturn="True" AcceptsTab="True"/>
+        <TextBox Name="ScoreboardTitle" HorizontalAlignment="Left" Height="20" Margin="340,60,0,0" TextWrapping="NoWrap" Text="Scoreboard" VerticalAlignment="Top" Width="120"/>
+        <ListBox Height="260" Width="180" Margin="310,80,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Name="Scoreboard"></ListBox>
+        <Grid x:Name="ProgressGrid">
+            <TextBox Name="LoadingText" HorizontalAlignment="Left" Height="20" Text="Processing" Margin="255,-90,0,0" TextWrapping="NoWrap" Width="252"/>
+            <ProgressBar Minimum="0" Maximum="100" Name="ProgressBar" IsIndeterminate="True" HorizontalAlignment="Left" Margin="255,200,0,0" VerticalAlignment="Top" Width="250" Height="15" />
+        </Grid>
+
+            
+
+    </Grid>
+</Window>
